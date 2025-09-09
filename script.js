@@ -1,6 +1,7 @@
 // ====== KONFIGURACJA ======
 const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579354546553';
 const NAZWA = 'Elektro - Impuls';
+const OPIS = 'Tu znajdziesz najnowsze informacje i kontakt do firmy.';
 const AVATAR_URL = 'assets/logo01.png';
 
 // ====== INICJALIZACJA UI ======
@@ -10,7 +11,7 @@ function init() {
   // Podstawowe dane
   $('#brandName').textContent = NAZWA;
   $('#heroTitle').textContent = NAZWA;
-  $('#heroSubtitle').textContent = $('.muted').textContent;
+  $('#heroSubtitle').textContent = OPIS;
   $('#brandAvatar').src = AVATAR_URL;
   $('#heroAvatar').src = AVATAR_URL;
 
