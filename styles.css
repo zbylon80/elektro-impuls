@@ -110,7 +110,7 @@ header {
         url('assets/background01.png') center/contain no-repeat;
     color: #e5e7eb;
     /* Zapewnij przestrzeń na wysokość obrazu */
-    min-height: 60vh;
+    min-height: clamp(320px, 60vh, 560px);
 }
 
 .hero-wrap {
@@ -204,13 +204,12 @@ section {
 
 
 /* === Drobne animacje === */
-.reveal {
-    opacity: 0;
-    transform: translateY(8px);
-    transition: .6s ease;
+.reveal { /* pokazuj sekcje domyślnie */
+    opacity: 1;
+    transform: none;
 }
 
-.reveal.is-visible {
+.reveal.is-visible { /* zachowane dla zgodności */
     opacity: 1;
     transform: none;
 }
