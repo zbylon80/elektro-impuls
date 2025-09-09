@@ -118,6 +118,10 @@ header {
     padding-block: 56px;
 }
 
+/* Usuń logo/kolumnę wizualną w sekcji hero */
+.hero-visual,
+#heroAvatar { display: none !important; }
+
 .hero h1 {
     font-size: clamp(28px, 6vw, 56px);
     line-height: 1.05;
@@ -147,12 +151,8 @@ header {
 
 @media (min-width: 880px) {
     .hero-wrap {
-        grid-template-columns: 1.1fr .9fr;
+        grid-template-columns: 1fr; /* po usunięciu wizualu zostaje jedna kolumna */
         padding-block: 80px;
-    }
-
-    .hero-visual {
-        justify-self: end;
     }
 }
 
