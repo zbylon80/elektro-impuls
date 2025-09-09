@@ -104,7 +104,7 @@ header {
 
 /* === Hero === */
 .hero {
-    background: transparent; /* tło zapewnia .hero-wrap */
+    background: #dc2626;
     color: #e5e7eb;
 }
 
@@ -114,12 +114,6 @@ header {
     gap: 28px;
     align-items: center;
     padding-block: 56px;
-    /* Tło dla kontenera hero: podmień plik na swój obraz */
-    background:
-        linear-gradient(rgba(2,6,23,.55), rgba(2,6,23,.55)),
-        url('assets/hero.jpg') center/cover no-repeat;
-    border-radius: 18px;
-    overflow: hidden;
 }
 
 .hero h1 {
