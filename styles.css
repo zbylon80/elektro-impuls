@@ -104,10 +104,13 @@ header {
 
 /* === Hero === */
 .hero {
+    /* Pokazuj cały obraz bez przycinania */
     background:
-        linear-gradient(rgba(2,6,23,.55), rgba(2,6,23,.55)),
-        url('assets/background01.png') center/cover no-repeat;
+        linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.45)),
+        url('assets/background01.png') center/contain no-repeat;
     color: #e5e7eb;
+    /* Zapewnij przestrzeń na wysokość obrazu */
+    min-height: 60vh;
 }
 
 .hero-wrap {
