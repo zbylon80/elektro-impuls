@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <!--
+  ======= Instrukcje szybkiego startu =======
+  1) Podmień KONFIGURACJĘ w script.js (NAZWA, OPIS, AVATAR_URL, FACEBOOK_URL)
+  2) Zastąp obrazki w galerii (assets/*) — możesz też linkować do zewnętrznych URL-i.
+  3) Podepnij własną domenę – zaktualizuj meta tagi (og:url, canonical) poniżej.
+  ===========================================
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elektro - Impuls</title>
+  <meta name="description" content="Oficjalna strona firmy Elektro - Impuls – informacje i kontakt." />
+  <link rel="canonical" href="https://twojadomena.pl/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Twoja Strona" />
+  <meta property="og:description" content="Informacje o firmie Elektro - Impuls i kontakt." />
+  <meta property="og:url" content="https://twojadomena.pl/" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:locale" content="pl_PL" />
+
+  <!-- Favicon (opcjonalnie podmień) -->
+  <link rel="icon" href="assets/favicon.svg" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img id="brandAvatar" src="assets/avatar.jpg" alt="Avatar" width="40" height="40" />
+        <span id="brandName" Elektro - Impuls</span>
+      </div>
+      <nav class="menu" aria-label="Główne">
+        <a href="#o-mnie">O&nbsp;mnie</a>
+
+
+        <a href="#galeria">Galeria</a>
+        <a class="btn btn--brand" id="fbBtn" href="#" target="_blank" rel="noopener">Facebook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div class="hero-copy">
+          <h1 id="heroTitle">Witaj na oficjalnej stronie firmy Elektro - Impuls</h1>
+          <p id="heroSubtitle">Tu znajdziesz najnowsze informacje i kontakt do firmy.</p>
+          <div class="cta">
+            <a class="btn btn--brand" id="ctaFacebook" href="#" target="_blank" rel="noopener"
+              aria-label="Otwórz na Facebooku">Zobacz na Facebooku</a>
+
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img id="heroAvatar" class="avatar" src="assets/avatar.jpg" alt="Zdjęcie profilowe" width="160"
+            height="160" />
+        </div>
+      </div>
+    </section>
+
+    <!-- O MNIE / O NAS -->
+    <section id="o-mnie" class="reveal">
+      <div class="container">
+        <h2 class="section-title">O&nbsp;mnie</h2>
+        <p class="muted">Elektro - Impuls to firma zajmująca się instalacjami elektrycznymi, i usuwaniem awarii elektryczcych.
+          Tu znajdziesz najnowsze informacje i kontakt do firmy.</p>
+        <div class="cards" style="margin-top: 16px;">
+          <div class="card"><strong>Specjalizacja</strong><br><span class="muted">Instalacje elektryczne, naprawy,
+              serwis</span></div>
+          <div class="card"><strong>Miasto</strong><br><span class="muted">Gdańsk, Polska</span></div>
+          <div class="card"><strong>Kontakt</strong><br><span class="muted"><a
+                href="mailto:zbigniew.kalinowski80@gmail.com">zbigniew.kalinowski80@gmail.com</a></span></div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- GALERIA -->
+    <section id="galeria" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Galeria</h2>
+        <div class="gallery">
+          <img src="assets/gallery-1.jpg" alt="Zdjęcie 1" loading="lazy" />
+          <img src="assets/gallery-2.jpg" alt="Zdjęcie 2" loading="lazy" />
+          <img src="assets/gallery-3.jpg" alt="Zdjęcie 3" loading="lazy" />
+          <img src="assets/gallery-4.jpg" alt="Zdjęcie 4" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- Dane strukturalne (schema.org) – uzupełnij odpowiednio Person/Organization) -->
+  <script type="application/ld+json" id="schemaData">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Elektro - Impuls",
+    "url": "https://twojadomena.pl/",
+    "image": "assets/logo01.png",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61579354546553"
+    ]
+  }
+  </script>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
