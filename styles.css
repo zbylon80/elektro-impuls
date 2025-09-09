@@ -63,13 +63,12 @@ header {
 }
 
 .brand img {
-    width: 120px;
-    height: 120px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: var(--shadow);
-    border: 4px solid rgba(255,255,255,0.95);
-    transform: translateY(14px); /* lekko nachodzi na sekcję hero */
+    transform: translateY(10px); /* lekko nachodzi na sekcję hero */
 }
 
 .menu {
@@ -152,17 +151,7 @@ header {
 @media (min-width: 880px) {
     .hero-wrap {
         grid-template-columns: 1fr; /* brak drugiej kolumny po usunięciu logo w hero */
-        padding-block: 88px; /* trochę więcej miejsca dla większego logotypu */
-    }
-}
-
-/* Responsywność: na wąskich ekranach zmniejsz logotyp, by nie zasłaniał treści */
-@media (max-width: 520px) {
-    .brand img {
-        width: 88px;
-        height: 88px;
-        transform: translateY(10px);
-        border-width: 3px;
+        padding-block: 80px;
     }
 }
 
