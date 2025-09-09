@@ -228,3 +228,26 @@ section {
 }
 
 .btn--brand:hover { filter: brightness(0.95); }
+
+/* === Nadpisania i dodatki === */
+/* Poprawione tło hero z image-set */
+.hero {
+    background:
+        linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.45)),
+        image-set(url('assets/background01.webp') type('image/webp'), url('assets/background01.png') type('image/png')) center/contain no-repeat;
+}
+
+/* Stopka */
+.site-footer {
+    border-top: 1px solid rgba(148, 163, 184, .16);
+    background: rgba(2, 6, 23, .6);
+}
+.footer-wrap {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 16px;
+    align-items: center;
+}
+@media (max-width: 640px) {
+    .footer-wrap { grid-template-columns: 1fr; }
+}
