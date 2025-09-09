@@ -64,10 +64,20 @@ header {
 }
 
 .brand img {
-    width: 60px;
-    height: 60px;
+    width: 88px;
+    height: 88px;
     border-radius: 50%;
     object-fit: cover;
+    /* Usuń białą obwódkę z pliku poprzez lekkie przycięcie krawędzi */
+    clip-path: circle(46% at 50% 50%);
+}
+
+@media (max-width: 520px) {
+    .brand img {
+        width: 72px;
+        height: 72px;
+        clip-path: circle(48% at 50% 50%);
+    }
 }
 
 .menu {
