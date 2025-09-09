@@ -21,8 +21,13 @@
   <meta property="og:title" content="Elektro - Impuls" />
   <meta property="og:description" content="Informacje o firmie Elektro - Impuls i kontakt." />
   <meta property="og:url" content="https://twojadomena.pl/" />
-  <meta property="og:image" content="assets/logo01.png" />
+  <meta property="og:image" content="https://twojadomena.pl/assets/logo01.png" />
   <meta property="og:locale" content="pl_PL" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elektro - Impuls" />
+  <meta name="twitter:description" content="Instalacje elektryczne i usuwanie awarii — kontakt i informacje." />
+  <meta name="twitter:image" content="https://twojadomena.pl/assets/logo01.png" />
 
   <!-- Favicon (podmień na finalny plik ikony) -->
   <link rel="icon" href="assets/logo01.png" />
@@ -59,7 +64,10 @@
           </div>
         </div>
         <div class="hero-visual">
-          <img id="heroAvatar" class="avatar" src="assets/logo01.png" alt="Zdjęcie profilowe" width="160" height="160" />
+          <picture>
+            <source srcset="assets/logo01.webp" type="image/webp" />
+            <img id="heroAvatar" class="avatar" src="assets/logo01.png" alt="Zdjęcie profilowe" width="160" height="160" loading="lazy" decoding="async" />
+          </picture>
         </div>
       </div>
     </section>
@@ -80,15 +88,43 @@
       </div>
     </section>
 
+    <!-- USŁUGI -->
+    <section id="uslugi" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Usługi</h2>
+        <div class="cards" style="margin-top: 16px;">
+          <div class="card"><strong>Montaż i modernizacja</strong><br><span class="muted">Instalacje elektryczne w domach i lokalach</span></div>
+          <div class="card"><strong>Usuwanie awarii</strong><br><span class="muted">Szybka diagnostyka i naprawy na miejscu</span></div>
+          <div class="card"><strong>Pomiary</strong><br><span class="muted">Przeglądy, pomiary, protokoły</span></div>
+          <div class="card"><strong>Doradztwo</strong><br><span class="muted">Dobór rozwiązań i materiałów</span></div>
+        </div>
+        <div class="cta" style="margin-top:16px;">
+          <a class="btn btn--brand" href="tel:+48600000000" aria-label="Zadzwoń teraz">Zadzwoń teraz</a>
+        </div>
+      </div>
+    </section>
+
     <!-- GALERIA -->
     <section id="galeria" class="reveal">
       <div class="container">
         <h2 class="section-title">Galeria</h2>
         <div class="gallery">
-          <img src="assets/logo01.png" alt="Zdjęcie 1" loading="lazy" decoding="async" />
-          <img src="assets/logo01.png" alt="Zdjęcie 2" loading="lazy" decoding="async" />
-          <img src="assets/logo01.png" alt="Zdjęcie 3" loading="lazy" decoding="async" />
-          <img src="assets/logo01.png" alt="Zdjęcie 4" loading="lazy" decoding="async" />
+          <picture>
+            <source srcset="assets/logo01.webp" type="image/webp" />
+            <img src="assets/logo01.png" width="800" height="600" alt="Zdjęcie 1" loading="lazy" decoding="async" />
+          </picture>
+          <picture>
+            <source srcset="assets/logo01.webp" type="image/webp" />
+            <img src="assets/logo01.png" width="800" height="600" alt="Zdjęcie 2" loading="lazy" decoding="async" />
+          </picture>
+          <picture>
+            <source srcset="assets/logo01.webp" type="image/webp" />
+            <img src="assets/logo01.png" width="800" height="600" alt="Zdjęcie 3" loading="lazy" decoding="async" />
+          </picture>
+          <picture>
+            <source srcset="assets/logo01.webp" type="image/webp" />
+            <img src="assets/logo01.png" width="800" height="600" alt="Zdjęcie 4" loading="lazy" decoding="async" />
+          </picture>
         </div>
       </div>
     </section>
@@ -98,18 +134,40 @@
   <script id="schemaData" type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "Electrician",
     "name": "Elektro - Impuls",
     "url": "https://twojadomena.pl/",
-    "image": "assets/logo01.png",
+    "image": "https://twojadomena.pl/assets/logo01.png",
+    "telephone": "+48 600 000 000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gdańsk",
+      "addressCountry": "PL"
+    },
+    "areaServed": ["Gdańsk", "Pomorskie"],
+    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61579354546553"
     ]
   }
   </script>
 
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-col">
+        <strong>Elektro - Impuls</strong><br/>
+        <span class="muted">Gdańsk, Polska</span>
+      </div>
+      <div class="footer-col">
+        <a class="btn" href="tel:+48600000000" aria-label="Zadzwoń do nas">Zadzwoń: +48&nbsp;600&nbsp;000&nbsp;000</a>
+      </div>
+      <div class="footer-col muted">
+        <a href="#">Polityka prywatności</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 
 </html>
-
