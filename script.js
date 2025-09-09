@@ -2,7 +2,7 @@
 const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579354546553';
 const NAZWA = 'Elektro - Impuls';
 const OPIS = 'Tu znajdziesz najnowsze informacje i kontakt do firmy.';
-const AVATAR_URL = 'assets/bolt.svg';
+const AVATAR_URL = 'assets/logo01.png';
 
 // ====== INICJALIZACJA UI ======
 const $ = (s) => document.querySelector(s);
