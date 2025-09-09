@@ -3,7 +3,8 @@
 
 <head>
   <!--
-  ======= Instrukcje szybkiego startu ===  1)    1) Podmień KONFIGURACJĘ w script.js (NAZWA, OPIS, AVATAR_URL, FACEBOOK_URL)
+  ======= Instrukcje szybkiego startu =======
+  1) Podmień KONFIGURACJĘ w script.js (NAZWA, OPIS, AVATAR_URL, FACEBOOK_URL)
   2) Zastąp obrazki w galerii (assets/*) — możesz też linkować do zewnętrznych URL-i.
   3) Podepnij własną domenę — zaktualizuj meta tagi (og:url, canonical) poniżej.
   ===========================================
@@ -13,6 +14,7 @@
   <title>Elektro - Impuls</title>
   <meta name="description" content="Oficjalna strona firmy Elektro - Impuls — informacje i kontakt." />
   <link rel="canonical" href="https://twojadomena.pl/" />
+  <meta name="theme-color" content="#0b1220" />
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
@@ -26,6 +28,7 @@
   <link rel="icon" href="assets/logo01.png" />
 
   <link rel="stylesheet" href="styles.css">
+  <meta name="color-scheme" content="dark light">
 </head>
 
 <body>
@@ -39,7 +42,7 @@
       <nav class="menu" aria-label="Główne">
         <a href="#o-mnie">O&nbsp;mnie</a>
         <a href="#galeria">Galeria</a>
-        <a class="btn btn--brand" id="fbBtn" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn--brand" id="fbBtn" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
       </nav>
     </div>
   </header>
@@ -52,13 +55,11 @@
           <h1 id="heroTitle">Witaj na oficjalnej stronie firmy Elektro - Impuls</h1>
           <p id="heroSubtitle">Tu znajdziesz najnowsze informacje i kontakt do firmy.</p>
           <div class="cta">
-            <a class="btn btn--brand" id="ctaFacebook" href="#" target="_blank" rel="noopener"
-              aria-label="Otwórz na Facebooku">Zobacz na Facebooku</a>
+            <a class="btn btn--brand" id="ctaFacebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Otwórz na Facebooku">Zobacz na Facebooku</a>
           </div>
         </div>
         <div class="hero-visual">
-          <img id="heroAvatar" class="avatar" src="assets/logo01.png" alt="Zdjęcie profilowe" width="160"
-            height="160" />
+          <img id="heroAvatar" class="avatar" src="assets/logo01.png" alt="Zdjęcie profilowe" width="160" height="160" />
         </div>
       </div>
     </section>
@@ -84,23 +85,21 @@
       <div class="container">
         <h2 class="section-title">Galeria</h2>
         <div class="gallery">
-          <img src="assets/logo01.png" alt="Zdjęcie 1" loading="lazy" />
-          <img src="assets/logo01.png" alt="Zdjęcie 2" loading="lazy" />
-          <img src="assets/logo01.png" alt="Zdjęcie 3" loading="lazy" />
-          <img src="assets/logo01.png" alt="Zdjęcie 4" loading="lazy" />
+          <img src="assets/logo01.png" alt="Zdjęcie 1" loading="lazy" decoding="async" />
+          <img src="assets/logo01.png" alt="Zdjęcie 2" loading="lazy" decoding="async" />
+          <img src="assets/logo01.png" alt="Zdjęcie 3" loading="lazy" decoding="async" />
+          <img src="assets/logo01.png" alt="Zdjęcie 4" loading="lazy" decoding="async" />
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Dane strukturalne (schema.org) — uzupełnij odpowiednio Organization/LocalBusiness) -->
-ane strukturalne (schema.org) â€” uzupeÅ‚nij odpowiednio Organization/LocalBusiness) -->
- Dane strukturalne (schema.org) â€” uzupeÅ‚nij odpowiednio Organization/LocalBusiness) -->
-  <script type="application/ld+jsonlogo01schemaData">
+  <!-- Dane strukturalne (schema.org) — uzupełnij docelowo LocalBusiness/Electrician) -->
+  <script id="schemaData" type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-logo01ame": "Elektro - Impuls",
+    "name": "Elektro - Impuls",
     "url": "https://twojadomena.pl/",
     "image": "assets/logo01.png",
     "sameAs": [
@@ -113,3 +112,4 @@ logo01ame": "Elektro - Impuls",
 </body>
 
 </html>
+
