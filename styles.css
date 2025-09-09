@@ -23,8 +23,8 @@ a {
 }
 
 :root {
-    --brand: #f97316; /* akcent: pomarańcz */
-    --bg: #0b1220;    /* granat pod tło */
+    --brand: #dc2626; /* akcent: pomaraÅ„cz */
+    --bg: #0b1220;    /* granat pod tÅ‚o */
     --text: #e5e7eb;  /* jasny tekst */
     --muted: #94a3b8; /* przygaszony */
     --card: #111827;  /* ciemne karty */
@@ -33,7 +33,7 @@ a {
     --container: 1200px;
 }
 
-/* === Układ === */
+/* === UkÅ‚ad === */
 .container {
     max-width: var(--container);
     margin-inline: auto;
@@ -64,18 +64,18 @@ header {
 }
 
 .brand img {
-    width: 88px;
-    height: 88px;
+    width: 104px;
+    height: 104px;
     border-radius: 50%;
     object-fit: cover;
-    /* Usuń białą obwódkę z pliku poprzez lekkie przycięcie krawędzi */
+    /* UsuÅ„ biaÅ‚Ä… obwÃ³dkÄ™ z pliku poprzez lekkie przyciÄ™cie krawÄ™dzi */
     clip-path: circle(46% at 50% 50%);
 }
 
 @media (max-width: 520px) {
     .brand img {
-        width: 72px;
-        height: 72px;
+        width: 84px;
+        height: 84px;
         clip-path: circle(48% at 50% 50%);
     }
 }
@@ -111,18 +111,18 @@ header {
 
 .btn--brand {
     background: var(--brand);
-    color: #0b0f14;
+    color: #fff;
     border-color: transparent;
 }
 
 /* === Hero === */
 .hero {
-    /* Pokazuj cały obraz bez przycinania */
+    /* Pokazuj caÅ‚y obraz bez przycinania */
     background:
         linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.45)),
         url('assets/background01.png') center/contain no-repeat;
     color: var(--text);
-    /* Zapewnij przestrzeń na wysokość obrazu */
+    /* Zapewnij przestrzeÅ„ na wysokoÅ›Ä‡ obrazu */
     min-height: clamp(320px, 60vh, 560px);
 }
 
@@ -134,7 +134,7 @@ header {
     padding-block: 56px;
 }
 
-/* Usuń logo/kolumnę wizualną w sekcji hero */
+/* UsuÅ„ logo/kolumnÄ™ wizualnÄ… w sekcji hero */
 .hero-visual,
 #heroAvatar { display: none !important; }
 
@@ -167,7 +167,7 @@ header {
 
 @media (min-width: 880px) {
     .hero-wrap {
-        grid-template-columns: 1fr; /* po usunięciu wizualu zostaje jedna kolumna */
+        grid-template-columns: 1fr; /* po usuniÄ™ciu wizualu zostaje jedna kolumna */
         padding-block: 80px;
     }
 }
@@ -217,12 +217,14 @@ section {
 
 
 /* === Drobne animacje === */
-.reveal { /* pokazuj sekcje domyślnie */
+.reveal { /* pokazuj sekcje domyÅ›lnie */
     opacity: 1;
     transform: none;
 }
 
-.reveal.is-visible { /* zachowane dla zgodności */
+.reveal.is-visible { /* zachowane dla zgodnoÅ›ci */
     opacity: 1;
     transform: none;
 }
+
+.btn--brand:hover { filter: brightness(0.95); }
