@@ -104,7 +104,9 @@ header {
 
 /* === Hero === */
 .hero {
-    background: #dc2626;
+    background:
+        linear-gradient(rgba(2,6,23,.55), rgba(2,6,23,.55)),
+        url('assets/background01.png') center/cover no-repeat;
     color: #e5e7eb;
 }
 
