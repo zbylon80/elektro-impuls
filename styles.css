@@ -45,6 +45,7 @@ header {
     backdrop-filter: blur(8px);
     background: rgba(248, 250, 252, .6);
     border-bottom: 1px solid rgba(15, 23, 42, .06);
+    overflow: visible; /* pozwól logotypowi zachodzić na hero */
 }
 
 .nav {
@@ -62,10 +63,12 @@ header {
 }
 
 .brand img {
-    width: 60px;
-    height: 60px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: var(--shadow);
+    transform: translateY(10px); /* lekko nachodzi na sekcję hero */
 }
 
 .menu {
@@ -147,12 +150,8 @@ header {
 
 @media (min-width: 880px) {
     .hero-wrap {
-        grid-template-columns: 1.1fr .9fr;
+        grid-template-columns: 1fr; /* brak drugiej kolumny po usunięciu logo w hero */
         padding-block: 80px;
-    }
-
-    .hero-visual {
-        justify-self: end;
     }
 }
 
