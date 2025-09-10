@@ -1,18 +1,18 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pl">
 
 <head>
   <!--
   ======= Instrukcje szybkiego startu =======
-  1) Podmień KONFIGURACJĘ w script.js (NAZWA, OPIS, AVATAR_URL, FACEBOOK_URL)
-  2) Zastąp obrazki w galerii (assets/*) — możesz też linkować do zewnętrznych URL-i.
-  3) Podepnij własną domenę — zaktualizuj meta tagi (og:url, canonical) poniżej.
+  1) Podmien KONFIGURACJE w script.js (NAZWA, OPIS, AVATAR_URL, FACEBOOK_URL)
+  2) Zastap obrazki w galerii (assets/*) - mozesz tez linkowac do zewnetrznych URL-i.
+  3) Podepnij wlasna domene - zaktualizuj meta tagi (og:url, canonical) ponizej.
   ===========================================
   -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elektro - Impuls</title>
-  <meta name="description" content="Oficjalna strona firmy Elektro - Impuls — informacje i kontakt." />
+  <meta name="description" content="Oficjalna strona firmy Elektro - Impuls - informacje i kontakt." />
   <link rel="canonical" href="https://elektro-impuls.azurestaticapps.net/" />
   <meta name="theme-color" content="#0b1220" />
 
@@ -24,12 +24,11 @@
   <meta property="og:image" content="https://elektro-impuls.azurestaticapps.net/assets/logo01.png" />
   <meta property="og:locale" content="pl_PL" />
 
-  <!-- Favicon (podmień na finalny plik ikony) -->
+  <!-- Favicon (podmien na finalny plik ikony) -->
   <link rel="icon" href="assets/logo01.png" />
 
   <link rel="stylesheet" href="styles.css">
   <meta name="color-scheme" content="dark light">
-  
 </head>
 
 <body>
@@ -44,7 +43,7 @@
         <span id="brandName">Elektro - Impuls</span>
       </div>
       <nav class="menu" aria-label="Główne">
-        <a href="#o-mnie">O&nbsp;mnie</a>
+        <a href="#o-nas">O&nbsp;nas</a>
         <a href="#galeria">Galeria</a>
         <a class="btn btn--brand" id="fbBtn" href="https://www.facebook.com/profile.php?id=61579354546553" target="_blank" rel="noopener noreferrer">Facebook</a>
       </nav>
@@ -57,7 +56,7 @@
       <div class="container hero-wrap">
         <div class="hero-copy">
           <h1 id="heroTitle">Elektro - Impuls</h1>
-          <p id="heroSubtitle">Tu znajdziesz najnowsze informacje i kontakt do firmy.</p>
+          <p id="heroSubtitle">Tu znajdziesz najnowsze informacje i kontakt do nas.</p>
           <div class="cta">
             <a class="btn btn--brand" id="ctaFacebook" href="tel:+48603138233" aria-label="Zadzwoń teraz">Zadzwoń teraz: 603&nbsp;138&nbsp;233</a>
           </div>
@@ -66,30 +65,26 @@
     </section>
 
     <!-- O MNIE / O NAS -->
-    <section id="o-mnie">
+    <section id="o-nas">
       <div class="container">
-        <h2 class="section-title">O&nbsp;mnie</h2>
-        <p class="muted">Elektro - Impuls to firma zajmująca się instalacjami elektrycznymi i usuwaniem awarii elektrycznych.
-          Tu znajdziesz najnowsze informacje i kontakt do firmy.</p>
-        <div class="cards mt-16">
-          <div class="card"><strong>Specjalizacja</strong><br><span class="muted">Instalacje elektryczne, naprawy,
-              serwis</span></div>
-          <div class="card"><strong>Miasto</strong><br><span class="muted">Gdańsk, Polska</span></div>
-          <div class="card"><strong>Kontakt</strong><br><span class="muted"><a
-                href="mailto:zbigniew.kalinowski80@gmail.com">zbigniew.kalinowski80@gmail.com</a></span></div>
-        </div>
-      </div>
-    </section>
+        <h2 class="section-title">O&nbsp;nas</h2>
+        <p class="muted">Elektro - Impuls to firma kompleksowo zajmująca się zagadnieniami elektrycznymi.</p>
+        <p class="muted">Od ponad 30 lat zajmujemy się instalacjami elektrycznymi oraz pomiarami. Gwarantujemy rzetelność, terminowość i bezpieczeństwo.</p>
 
-    <!-- USŁUGI -->
-    <section id="uslugi">
-      <div class="container">
-        <h2 class="section-title">Usługi</h2>
         <div class="cards mt-16">
-          <div class="card"><strong>Montaż i modernizacja</strong><br><span class="muted">Instalacje elektryczne w domach i lokalach</span></div>
-          <div class="card"><strong>Usuwanie awarii</strong><br><span class="muted">Szybka diagnostyka i naprawy na miejscu</span></div>
-          <div class="card"><strong>Pomiary</strong><br><span class="muted">Przeglądy, pomiary, protokoły</span></div>
-          <div class="card"><strong>Doradztwo</strong><br><span class="muted">Dobór rozwiązań i materiałów</span></div>
+          <div class="card"><strong>Specjalizacja</strong>
+            <ul class="muted">
+              <li>Montaż instalacji i urządzeń elektrycznych w budownictwie</li>
+              <li>Modernizacja instalacji elektrycznych</li>
+              <li>Usuwanie awarii</li>
+              <li>Kompensacja mocy biernej</li>
+              <li>Badanie sieci i pomiary ochronne</li>
+              <li>Projektowanie instalacji elektrycznych</li>
+              <li>Doradztwo w zakresie doboru rozwiązań i materiałów</li>
+            </ul>
+          </div>
+          <div class="card"><strong>Miasto</strong><br><span class="muted">Gdańsk, Polska</span></div>
+          <div class="card"><strong>Adres e-mail</strong><br><span class="muted"><a href="mailto:zbigniew.kalinowski80@gmail.com">zbigniew.kalinowski80@gmail.com</a></span></div>
         </div>
       </div>
     </section>
@@ -100,27 +95,27 @@
         <h2 class="section-title">Galeria</h2>
         <div class="gallery">
           <picture>
-            <source srcset="assets/logo01.webp" type="image/webp" />
+            <source srcset="assets/image01.webp" type="image/webp" />
             <img src="assets/logo01.png" width="800" height="600" alt="Zdjęcie 1" loading="lazy" decoding="async" />
           </picture>
           <picture>
-            <source srcset="assets/logo01.webp" type="image/webp" />
-            <img src="assets/logo01.png" width="800" height="600" alt="Zdjęcie 2" loading="lazy" decoding="async" />
+            <source srcset="assets/image02.webp" type="image/webp" />
+            <img src="assets/image02.png" width="800" height="600" alt="Zdjęcie 2" loading="lazy" decoding="async" />
           </picture>
           <picture>
-            <source srcset="assets/logo01.webp" type="image/webp" />
-            <img src="assets/logo01.png" width="800" height="600" alt="Zdjęcie 3" loading="lazy" decoding="async" />
+            <source srcset="assets/image03.webp" type="image/webp" />
+            <img src="assets/image03.png" width="800" height="600" alt="Zdjęcie 3" loading="lazy" decoding="async" />
           </picture>
           <picture>
-            <source srcset="assets/logo01.webp" type="image/webp" />
-            <img src="assets/logo01.png" width="800" height="600" alt="Zdjęcie 4" loading="lazy" decoding="async" />
+            <source srcset="assets/image04.webp" type="image/webp" />
+            <img src="assets/image04.png" width="800" height="600" alt="Zdjęcie 4" loading="lazy" decoding="async" />
           </picture>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Dane strukturalne (schema.org) — uzupełnij docelowo LocalBusiness/Electrician) -->
+  <!-- Dane strukturalne (schema.org) - uzupełnij docelowo LocalBusiness/Electrician) -->
   <script id="schemaData" type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -150,9 +145,6 @@
       </div>
       <div class="footer-col">
         <a class="btn" href="tel:+48603138233" aria-label="Zadzwoń do nas">Zadzwoń: +48&nbsp;603&nbsp;138&nbsp;233</a>
-      </div>
-      <div class="footer-col muted">
-        <a href="#">Polityka prywatności</a>
       </div>
     </div>
   </footer>
