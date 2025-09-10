@@ -233,8 +233,8 @@ section {
 /* Poprawione tło hero z image-set */
 .hero {
     background:
-        linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.45)),
-        image-set(url('assets/background01.webp') type('image/webp'), url('assets/background01.png') type('image/png')) center/contain no-repeat;
+        linear-gradient(90deg, rgba(2,6,23,.75) 0 32%, rgba(2,6,23,.45) 32% 100%),
+        image-set(url('assets/background01.webp') type('image/webp'), url('assets/background01.png') type('image/png')) right center / cover no-repeat;
 }
 
 /* Stopka */
