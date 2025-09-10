@@ -1,0 +1,7 @@
+* text=auto eol=crlf
+
+# Wymuś UTF-8 dla plików źródłowych
+*.html text working-tree-encoding=UTF-8
+*.css  text working-tree-encoding=UTF-8
+*.js   text working-tree-encoding=UTF-8
+

@@ -45,11 +45,7 @@ function init() {
     schemaEl.textContent = JSON.stringify(schema, null, 2);
   } catch (e) { /* noop */ }
 
-  // Proste ujawnianie sekcji przy przewijaniu
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  // (usunięto reveal/IntersectionObserver — brak animacji przewijania)
 }
 
 document.addEventListener('DOMContentLoaded', init);

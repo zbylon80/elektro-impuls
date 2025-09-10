@@ -135,8 +135,7 @@ header {
 }
 
 
-.hero-visual,
-#heroAvatar { display: none !important; }
+
 
 .hero h1 {
     font-size: clamp(28px, 6vw, 56px);
@@ -250,4 +249,14 @@ section {
 }
 @media (max-width: 640px) {
     .footer-wrap { grid-template-columns: 1fr; }
+}
+
+/* Utility */
+.mt-16 { margin-top: 16px; }
+
+/* Focus visibility */
+.btn:focus-visible,
+.menu a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
