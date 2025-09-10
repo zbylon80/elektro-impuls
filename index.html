@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pl">
 
 <head>
@@ -37,7 +37,10 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <img id="brandAvatar" src="assets/logo01.png" alt="Avatar" width="40" height="40" />
+        <picture>
+          <source srcset="assets/logo01.webp" type="image/webp" />
+          <img id="brandAvatar" src="assets/logo01.png" alt="Logo Elektro - Impuls" width="104" height="104" />
+        </picture>
         <span id="brandName">Elektro - Impuls</span>
       </div>
       <nav class="menu" aria-label="Główne">
@@ -53,28 +56,22 @@
     <section class="hero">
       <div class="container hero-wrap">
         <div class="hero-copy">
-          <h1 id="heroTitle">Witaj na oficjalnej stronie firmy Elektro - Impuls</h1>
+          <h1 id="heroTitle">Elektro - Impuls</h1>
           <p id="heroSubtitle">Tu znajdziesz najnowsze informacje i kontakt do firmy.</p>
           <div class="cta">
-            <a class="btn btn--brand" id="ctaFacebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Otwórz na Facebooku">Zobacz na Facebooku</a>
+            <a class="btn btn--brand" id="ctaFacebook" href="tel:+48603138233" aria-label="Zadzwoń teraz">Zadzwoń teraz: 603&nbsp;138&nbsp;233</a>
           </div>
-        </div>
-        <div class="hero-visual">
-          <picture>
-            <source srcset="assets/logo01.webp" type="image/webp" />
-            <img id="heroAvatar" class="avatar" src="assets/logo01.png" alt="Zdjęcie profilowe" width="160" height="160" loading="lazy" decoding="async" />
-          </picture>
         </div>
       </div>
     </section>
 
     <!-- O MNIE / O NAS -->
-    <section id="o-mnie" class="reveal">
+    <section id="o-mnie">
       <div class="container">
         <h2 class="section-title">O&nbsp;mnie</h2>
         <p class="muted">Elektro - Impuls to firma zajmująca się instalacjami elektrycznymi i usuwaniem awarii elektrycznych.
           Tu znajdziesz najnowsze informacje i kontakt do firmy.</p>
-        <div class="cards" style="margin-top: 16px;">
+        <div class="cards mt-16">
           <div class="card"><strong>Specjalizacja</strong><br><span class="muted">Instalacje elektryczne, naprawy,
               serwis</span></div>
           <div class="card"><strong>Miasto</strong><br><span class="muted">Gdańsk, Polska</span></div>
@@ -85,23 +82,20 @@
     </section>
 
     <!-- USŁUGI -->
-    <section id="uslugi" class="reveal">
+    <section id="uslugi">
       <div class="container">
         <h2 class="section-title">Usługi</h2>
-        <div class="cards" style="margin-top: 16px;">
+        <div class="cards mt-16">
           <div class="card"><strong>Montaż i modernizacja</strong><br><span class="muted">Instalacje elektryczne w domach i lokalach</span></div>
           <div class="card"><strong>Usuwanie awarii</strong><br><span class="muted">Szybka diagnostyka i naprawy na miejscu</span></div>
           <div class="card"><strong>Pomiary</strong><br><span class="muted">Przeglądy, pomiary, protokoły</span></div>
           <div class="card"><strong>Doradztwo</strong><br><span class="muted">Dobór rozwiązań i materiałów</span></div>
         </div>
-        <div class="cta" style="margin-top:16px;">
-          <a class="btn btn--brand" href="tel:+48600000000" aria-label="Zadzwoń teraz">Zadzwoń teraz</a>
-        </div>
       </div>
     </section>
 
     <!-- GALERIA -->
-    <section id="galeria" class="reveal">
+    <section id="galeria">
       <div class="container">
         <h2 class="section-title">Galeria</h2>
         <div class="gallery">
@@ -164,7 +158,9 @@
   </footer>
 
   <script src="script.js"></script>
+  <link rel="preload" as="image" href="assets/logo01.webp" type="image/webp" />
+  <link rel="preload" as="image" href="assets/logo01.png" type="image/png" />
+  <link rel="preload" as="image" href="assets/background01.webp" type="image/webp" />
 </body>
 
 </html>
-

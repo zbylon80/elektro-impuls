@@ -1,10 +1,10 @@
-﻿// ====== KONFIGURACJA ======
+// ====== KONFIGURACJA ======
 const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579354546553';
 const NAZWA = 'Elektro - Impuls';
 const OPIS = 'Tu znajdziesz najnowsze informacje i kontakt do firmy.';
 const AVATAR_URL = 'assets/logo01.png';
-const TELEFON = '+48 600 000 000';
-const MIASTO = 'GdaÅ„sk';
+const TELEFON = '+48 603 138 233';
+const MIASTO = 'Gdańsk';
 
 // ====== INICJALIZACJA UI ======
 const $ = (s) => document.querySelector(s);
@@ -19,7 +19,7 @@ function init() {
 
   // Linki do Facebooka
   $('#fbBtn').href = FACEBOOK_URL;
-  $('#ctaFacebook').href = FACEBOOK_URL;
+  $('#ctaFacebook').href = 'tel:+48603138233';
 
   // Dane strukturalne JSON-LD
   try {
@@ -45,11 +45,7 @@ function init() {
     schemaEl.textContent = JSON.stringify(schema, null, 2);
   } catch (e) { /* noop */ }
 
-  // Proste ujawnianie sekcji przy przewijaniu
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  // (usunięto reveal/IntersectionObserver — brak animacji przewijania)
 }
 
 document.addEventListener('DOMContentLoaded', init);
