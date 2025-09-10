@@ -1,4 +1,4 @@
-/* === Reset === */
+
 *,
 *::before,
 *::after {
@@ -23,17 +23,17 @@ a {
 }
 
 :root {
-    --brand: #dc2626; /* akcent: pomaraÅ„cz */
-    --bg: #0b1220;    /* granat pod tÅ‚o */
-    --text: #e5e7eb;  /* jasny tekst */
-    --muted: #94a3b8; /* przygaszony */
-    --card: #111827;  /* ciemne karty */
+    --brand: #dc2626; 
+    --bg: #0b1220;    
+    --text: #e5e7eb;  
+    --muted: #94a3b8; 
+    --card: #111827;  
     --radius: 16px;
     --shadow: 0 10px 30px rgba(2, 6, 23, .28);
     --container: 1200px;
 }
 
-/* === UkÅ‚ad === */
+
 .container {
     max-width: var(--container);
     margin-inline: auto;
@@ -68,7 +68,7 @@ header {
     height: 104px;
     border-radius: 50%;
     object-fit: cover;
-    /* UsuÅ„ biaÅ‚Ä… obwÃ³dkÄ™ z pliku poprzez lekkie przyciÄ™cie krawÄ™dzi */
+    
     clip-path: circle(46% at 50% 50%);
 }
 
@@ -115,14 +115,14 @@ header {
     border-color: transparent;
 }
 
-/* === Hero === */
+
 .hero {
-    /* Pokazuj caÅ‚y obraz bez przycinania */
+    
     background:
         linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.45)),
         url('assets/background01.png') center/contain no-repeat;
     color: var(--text);
-    /* Zapewnij przestrzeÅ„ na wysokoÅ›Ä‡ obrazu */
+    
     min-height: clamp(320px, 60vh, 560px);
 }
 
@@ -134,7 +134,7 @@ header {
     padding-block: 56px;
 }
 
-/* UsuÅ„ logo/kolumnÄ™ wizualnÄ… w sekcji hero */
+
 .hero-visual,
 #heroAvatar { display: none !important; }
 
@@ -167,12 +167,12 @@ header {
 
 @media (min-width: 880px) {
     .hero-wrap {
-        grid-template-columns: 1fr; /* po usuniÄ™ciu wizualu zostaje jedna kolumna */
+        grid-template-columns: 1fr; 
         padding-block: 80px;
     }
 }
 
-/* === Sekcje === */
+
 section {
     padding-block: 56px;
 }
@@ -201,7 +201,7 @@ section {
     box-shadow: var(--shadow);
 }
 
-/* === Galeria === */
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -216,28 +216,28 @@ section {
 
 
 
-/* === Drobne animacje === */
-.reveal { /* pokazuj sekcje domyÅ›lnie */
+
+.reveal { 
     opacity: 1;
     transform: none;
 }
 
-.reveal.is-visible { /* zachowane dla zgodnoÅ›ci */
+.reveal.is-visible { 
     opacity: 1;
     transform: none;
 }
 
 .btn--brand:hover { filter: brightness(0.95); }
 
-/* === Nadpisania i dodatki === */
-/* Poprawione tło hero z image-set */
+
+
 .hero {
     background:
         linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.45)),
         image-set(url('assets/background01.webp') type('image/webp'), url('assets/background01.png') type('image/png')) center/contain no-repeat;
 }
 
-/* Stopka */
+
 .site-footer {
     border-top: 1px solid rgba(148, 163, 184, .16);
     background: rgba(2, 6, 23, .6);
