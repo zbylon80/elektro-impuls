@@ -50,3 +50,52 @@ function init() {
 
 document.addEventListener('DOMContentLoaded', init);
 
+// ====== Gallery Lightbox ======
+function setupGalleryLightbox() {
+  const gallery = document.querySelector('.gallery');
+  if (!gallery) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.innerHTML = `
+    <img class="lightbox__img" alt="" />
+    <button class="lightbox__close" aria-label="Zamknij">\u00D7</button>
+  `;
+  document.body.appendChild(overlay);
+
+  const overlayImg = overlay.querySelector('.lightbox__img');
+  const btnClose = overlay.querySelector('.lightbox__close');
+
+  const open = (src, alt) => {
+    overlayImg.src = src;
+    overlayImg.alt = alt || '';
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    overlay.classList.remove('is-open');
+    overlayImg.src = '';
+    document.body.style.overflow = '';
+  };
+
+  gallery.addEventListener('click', (e) => {
+    const img = e.target.closest('img');
+    if (!img || !gallery.contains(img)) return;
+    e.preventDefault();
+    const src = img.currentSrc || img.src;
+    open(src, img.alt);
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) close();
+  });
+  btnClose.addEventListener('click', close);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', setupGalleryLightbox);
+
