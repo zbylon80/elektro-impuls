@@ -1,0 +1,162 @@
+1: <!doctype html>
+2: <html lang="pl">
+3: 
+4: <head>
+5:   <!--
+6:   ======= Instrukcje szybkiego startu =======
+7:   1) Podmien KONFIGURACJE w script.js (NAZWA, OPIS, AVATAR_URL, FACEBOOK_URL)
+8:   2) Zastap obrazki w galerii (assets/*) � mozesz tez linkowac do zewnetrznych URL-i.
+9:   3) Podepnij wlasna domene � zaktualizuj meta tagi (og:url, canonical) ponizej.
+10:   ===========================================
+11:   -->
+12:   <meta charset="utf-8" />
+13:   <meta name="viewport" content="width=device-width, initial-scale=1" />
+14:   <title>Elektro - Impuls</title>
+15:   <meta name="description" content="Oficjalna strona firmy Elektro - Impuls � informacje i kontakt." />
+16:   <link rel="canonical" href="https://elektro-impuls.azurestaticapps.net/" />
+17:   <meta name="theme-color" content="#0b1220" />
+18: 
+19:   <!-- Open Graph / Social -->
+20:   <meta property="og:type" content="website" />
+21:   <meta property="og:title" content="Elektro - Impuls" />
+22:   <meta property="og:description" content="Informacje o firmie Elektro - Impuls i kontakt." />
+23:   <meta property="og:url" content="https://elektro-impuls.azurestaticapps.net/" />
+24:   <meta property="og:image" content="https://elektro-impuls.azurestaticapps.net/assets/logo01.png" />
+25:   <meta property="og:locale" content="pl_PL" />
+26: 
+27:   <!-- Favicon (podmien na finalny plik ikony) -->
+28:   <link rel="icon" href="assets/logo01.png" />
+29: 
+30:   <link rel="stylesheet" href="styles.css">
+31:   <meta name="color-scheme" content="dark light">
+32:   
+33: </head>
+34: 
+35: <body>
+36: 
+37:   <header>
+38:     <div class="container nav">
+39:       <div class="brand">
+40:         <picture>
+41:           <source srcset="assets/logo01.webp" type="image/webp" />
+42:           <img id="brandAvatar" src="assets/logo01.png" alt="Logo Elektro - Impuls" width="104" height="104" />
+43:         </picture>
+44:         <span id="brandName">Elektro - Impuls</span>
+45:       </div>
+46:       <nav class="menu" aria-label="Gl�wne">
+47:         <a href="#o-nas">O&nbsp;mnie</a>
+48:         <a href="#galeria">Galeria</a>
+49:         <a class="btn btn--brand" id="fbBtn" href="https://www.facebook.com/profile.php?id=61579354546553" target="_blank" rel="noopener noreferrer">Facebook</a>
+50:       </nav>
+51:     </div>
+52:   </header>
+53: 
+54:   <main id="main">
+55:     <!-- HERO -->
+56:     <section class="hero">
+57:       <div class="container hero-wrap">
+58:         <div class="hero-copy">
+59:           <h1 id="heroTitle">Elektro - Impuls</h1>
+60:           <p id="heroSubtitle">Tu znajdziesz najnowsze informacje i kontakt do nas.</p>
+61:           <div class="cta">
+62:             <a class="btn btn--brand" id="ctaFacebook" href="tel:+48603138233" aria-label="Zadzwon teraz">Zadzwon teraz: 603&nbsp;138&nbsp;233</a>
+63:           </div>
+64:         </div>
+65:       </div>
+66:     </section>
+67: 
+68:     <!-- O MNIE / O NAS -->
+69:     <section id="o-nas">
+70:       <div class="container">
+71:         <h2 class="section-title">O&nbsp;mnie</h2>
+72:         <p class="muted">Elektro - Impuls to firma zajmujaca sie instalacjami elektrycznymi i usuwaniem awarii elektrycznych.</p><p>Od ponad 30 lat zajmujemy sie kompleksowymi instalacjami elektrycznymi oraz pomiarami.</p><p>Gwarantujemy rzetelnosc, terminowosc i bezpieczenstwo � sprawdzony elektryk w Twojej okolicy!</p>
+73:         <div class="cards mt-16">
+74:           <div class="card"><strong>Specjalizacja</strong><br><span class="muted">Instalacje elektryczne, naprawy,
+75:               serwis</span></div>
+76:           <div class="card"><strong>Miasto</strong><br><span class="muted">Gdansk, Polska</span></div>
+77:           <div class="card"><strong>Kontakt</strong><br><span class="muted"><a
+78:                 href="mailto:zbigniew.kalinowski80@gmail.com">zbigniew.kalinowski80@gmail.com</a></span></div>
+79:         </div>
+80:       </div>
+81:     </section>
+82: 
+83:     <!-- USLUGI -->
+84:     <section id="uslugi">
+85:       <div class="container">
+86:         <h2 class="section-title">Uslugi</h2>
+87:         <div class="cards mt-16">
+88:           <div class="card"><strong>Montaz i modernizacja</strong><br><span class="muted">Instalacje elektryczne w domach i lokalach</span></div>
+89:           <div class="card"><strong>Usuwanie awarii</strong><br><span class="muted">Szybka diagnostyka i naprawy na miejscu</span></div>
+90:           <div class="card"><strong>Pomiary</strong><br><span class="muted">Przeglady, pomiary, protokoly</span></div>
+91:           <div class="card"><strong>Doradztwo</strong><br><span class="muted">Dob�r rozwiazan i material�w</span></div>
+92:         </div>
+93:       </div>
+94:     </section>
+95: 
+96:     <!-- GALERIA -->
+97:     <section id="galeria">
+98:       <div class="container">
+99:         <h2 class="section-title">Galeria</h2>
+100:         <div class="gallery">
+101:           <picture>
+102:             <source srcset="assets/image01.webp" type="image/webp" />
+103:             <img src="assets/logo01.png" width="800" height="600" alt="Zdjecie 1" loading="lazy" decoding="async" />
+104:           </picture>
+105:           <picture>
+106:             <source srcset="assets/image02.webp" type="image/webp" />
+107:             <img src="assets/image02.png" width="800" height="600" alt="Zdjecie 2" loading="lazy" decoding="async" />
+108:           </picture>
+109:           <picture>
+110:             <source srcset="assets/image03.webp" type="image/webp" />
+111:             <img src="assets/image03.png" width="800" height="600" alt="Zdjecie 3" loading="lazy" decoding="async" />
+112:           </picture>
+113:           <picture>
+114:             <source srcset="assets/image04.webp" type="image/webp" />
+115:             <img src="assets/image04.png" width="800" height="600" alt="Zdjecie 4" loading="lazy" decoding="async" />
+116:           </picture>
+117:         </div>
+118:       </div>
+119:     </section>
+120:   </main>
+121: 
+122:   <!-- Dane strukturalne (schema.org) � uzupelnij docelowo LocalBusiness/Electrician) -->
+123:   <script id="schemaData" type="application/ld+json">
+124:   {
+125:     "@context": "https://schema.org",
+126:     "@type": "Electrician",
+127:     "name": "Elektro - Impuls",
+128:     "url": "https://elektro-impuls.azurestaticapps.net/",
+129:     "image": "https://elektro-impuls.azurestaticapps.net/assets/logo01.png",
+130:     "telephone": "+48 603 138 233",
+131:     "address": {
+132:       "@type": "PostalAddress",
+133:       "addressLocality": "Gdansk",
+134:       "addressCountry": "PL"
+135:     },
+136:     "areaServed": ["Gdansk", "Pomorskie"],
+137:     "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
+138:     "sameAs": [
+139:       "https://www.facebook.com/profile.php?id=61579354546553"
+140:     ]
+141:   }
+142:   </script>
+143: 
+144:   <footer class="site-footer">
+145:     <div class="container footer-wrap">
+146:       <div class="footer-col">
+147:         <strong>Elektro - Impuls</strong><br/>
+148:         <span class="muted">Gdansk, Polska</span>
+149:       </div>
+150:       <div class="footer-col">
+151:         <a class="btn" href="tel:+48603138233" aria-label="Zadzwon do nas">Zadzwon: +48&nbsp;603&nbsp;138&nbsp;233</a>
+152:       </div>
+153:     </div>
+154:   </footer>
+155: 
+156:   <script src="script.js"></script>
+157:   <link rel="preload" as="image" href="assets/logo01.webp" type="image/webp" />
+158:   <link rel="preload" as="image" href="assets/logo01.png" type="image/png" />
+159:   <link rel="preload" as="image" href="assets/background01.webp" type="image/webp" />
+160: </body>
+161: 
+162: </html>

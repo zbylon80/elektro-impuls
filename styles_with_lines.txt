@@ -1,0 +1,284 @@
+1: 
+2: *,
+3: *::before,
+4: *::after {
+5:     box-sizing: border-box;
+6: }
+7: 
+8: body {
+9:     margin: 0;
+10:     font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+11:     color: var(--text);
+12:     background: var(--bg);
+13: }
+14: 
+15: img {
+16:     max-width: 100%;
+17:     display: block;
+18: }
+19: 
+20: a {
+21:     color: inherit;
+22:     text-decoration: none;
+23: }
+24: 
+25: :root {
+26:     --brand: #dc2626; 
+27:     --bg: #0b1220;    
+28:     --text: #e5e7eb;  
+29:     --muted: #94a3b8; 
+30:     --card: #111827;  
+31:     --radius: 16px;
+32:     --shadow: 0 10px 30px rgba(2, 6, 23, .28);
+33:     --container: 1200px;
+34: }
+35: 
+36: 
+37: .container {
+38:     max-width: var(--container);
+39:     margin-inline: auto;
+40:     padding: 24px;
+41: }
+42: 
+43: header {
+44:     position: sticky;
+45:     top: 0;
+46:     z-index: 50;
+47:     backdrop-filter: blur(8px);
+48:     background: rgba(2, 6, 23, .6);
+49:     border-bottom: 1px solid rgba(148, 163, 184, .16);
+50: }
+51: 
+52: .nav {
+53:     display: flex;
+54:     align-items: center;
+55:     justify-content: space-between;
+56:     gap: 16px;
+57: }
+58: 
+59: .brand {
+60:     display: flex;
+61:     align-items: center;
+62:     gap: 12px;
+63:     font-weight: 700;
+64: }
+65: 
+66: .brand img {
+67:     width: 104px;
+68:     height: 104px;
+69:     border-radius: 50%;
+70:     object-fit: cover;
+71:     
+72:     clip-path: circle(46% at 50% 50%);
+73: }
+74: 
+75: @media (max-width: 520px) {
+76:     .brand img {
+77:         width: 84px;
+78:         height: 84px;
+79:         clip-path: circle(48% at 50% 50%);
+80:     }
+81: }
+82: 
+83: .menu {
+84:     display: flex;
+85:     gap: 18px;
+86:     align-items: center;
+87: }
+88: 
+89: .menu a {
+90:     color: var(--text);
+91:     font-weight: 600;
+92:     opacity: .9;
+93: }
+94: 
+95: .menu a:hover {
+96:     opacity: 1;
+97: }
+98: 
+99: .btn {
+100:     display: inline-flex;
+101:     align-items: center;
+102:     gap: 8px;
+103:     padding: 10px 16px;
+104:     border-radius: 12px;
+105:     font-weight: 700;
+106:     border: 1px solid rgba(148, 163, 184, .16);
+107:     background: var(--card);
+108:     color: var(--text);
+109:     box-shadow: var(--shadow);
+110: }
+111: 
+112: .btn--brand {
+113:     background: var(--brand);
+114:     color: #fff;
+115:     border-color: transparent;
+116: }
+117: 
+118: 
+119: .hero {
+120:     
+121:     background:
+122:         linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.45)),
+123:         url('assets/background01.png') center/contain no-repeat;
+124:     color: var(--text);
+125:     
+126:     min-height: clamp(320px, 60vh, 560px);
+127: }
+128: 
+129: .hero-wrap {
+130:     display: grid;
+131:     grid-template-columns: 1fr;
+132:     gap: 28px;
+133:     align-items: center;
+134:     padding-block: 56px;
+135: }
+136: 
+137: 
+138: 
+139: 
+140: .hero h1 {
+141:     font-size: clamp(28px, 6vw, 56px);
+142:     line-height: 1.05;
+143:     margin: 0 0 12px;
+144:     letter-spacing: -0.02em;
+145: }
+146: 
+147: .hero p {
+148:     color: #cbd5e1;
+149:     margin: 0 0 22px;
+150: }
+151: 
+152: .hero .cta {
+153:     display: flex;
+154:     gap: 12px;
+155:     flex-wrap: wrap;
+156: }
+157: 
+158: .avatar {
+159:     width: 300px;
+160:     height: 300px;
+161:     border-radius: 50%;
+162:     border: 3px solid rgba(255, 255, 255, .3);
+163:     box-shadow: var(--shadow);
+164:     object-fit: cover;
+165: }
+166: 
+167: @media (min-width: 880px) {
+168:     .hero-wrap {
+169:         grid-template-columns: 1fr; 
+170:         padding-block: 80px;
+171:     }
+172: }
+173: 
+174: 
+175: section {
+176:     padding-block: 56px;
+177: }
+178: 
+179: .section-title {
+180:     font-size: clamp(22px, 4vw, 36px);
+181:     margin: 0 0 16px;
+182:     letter-spacing: -0.01em;
+183: }
+184: 
+185: .muted {
+186:     color: var(--muted);
+187: }
+188: 
+189: .cards {
+190:     display: grid;
+191:     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+192:     gap: 18px;
+193: }
+194: 
+195: .card {
+196:     background: var(--card);
+197:     border: 1px solid rgba(148, 163, 184, .12);
+198:     border-radius: var(--radius);
+199:     padding: 20px;
+200:     box-shadow: var(--shadow);
+201: }
+202: 
+203: 
+204: .gallery {
+205:     display: grid;
+206:     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+207:     gap: 10px;
+208: }
+209: 
+210: .gallery img {
+211:     border-radius: 14px;
+212:     aspect-ratio: 4/3;
+213:     object-fit: cover;
+214:     cursor: zoom-in;
+215: }
+216: 
+217: 
+218: 
+219: 
+220: .reveal { 
+221:     opacity: 1;
+222:     transform: none;
+223: }
+224: 
+225: .reveal.is-visible { 
+226:     opacity: 1;
+227:     transform: none;
+228: }
+229: 
+230: .btn--brand:hover { filter: brightness(0.95); }
+231: 
+232: 
+233: 
+234: .hero {
+235:     background:
+236:         linear-gradient(rgba(2,6,23,.45), rgba(2,6,23,.45)),
+237:         image-set(url('assets/background01.webp') type('image/webp'), url('assets/background01.png') type('image/png')) center/contain no-repeat;
+238: }
+239: 
+240: 
+241: .site-footer {
+242:     border-top: 1px solid rgba(148, 163, 184, .16);
+243:     background: rgba(2, 6, 23, .6);
+244: }
+245: .footer-wrap {
+246:     display: grid;
+247:     grid-template-columns: 1fr auto auto;
+248:     gap: 16px;
+249:     align-items: center;
+250: }
+251: @media (max-width: 640px) {
+252:     .footer-wrap { grid-template-columns: 1fr; }
+253: }
+254: 
+255: /* Utility */
+256: .mt-16 { margin-top: 16px; }
+257: 
+258: /* Focus visibility */
+259: .btn:focus-visible,
+260: .menu a:focus-visible {
+261:   outline: 2px solid #fff;
+262:   outline-offset: 2px;
+263: }
+264: 
+265: /* Lightbox (gallery zoom) */
+266: .lightbox-overlay {
+267:   position: fixed;
+268:   inset: 0;
+269:   background: rgba(0, 0, 0, 0.88);
+270:   display: none;
+271:   align-items: center;
+272:   justify-content: center;
+273:   padding: 24px;
+274:   z-index: 9999;
+275:   cursor: zoom-out;
+276: }
+277: .lightbox-overlay.open { display: flex; }
+278: .lightbox-image {
+279:   max-width: min(96vw, 1400px);
+280:   max-height: 92vh;
+281:   border-radius: 12px;
+282:   box-shadow: 0 20px 50px rgba(0,0,0,.5);
+283:   object-fit: contain;
+284: }
