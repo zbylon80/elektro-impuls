@@ -1,9 +1,9 @@
-﻿// ====== KONFIGURACJA ======
+// ====== KONFIGURACJA ======
 const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579354546553';
 const NAZWA = 'Elektro - Impuls';
 const OPIS = 'Tu znajdziesz najnowsze informacje i kontakt do firmy.';
 const AVATAR_URL = 'assets/logo01.png';
-const TELEFON = '+48 600 000 000';
+const TELEFON = '+48 603 138 233';
 const MIASTO = 'GdaÅ„sk';
 
 // ====== INICJALIZACJA UI ======
@@ -19,7 +19,7 @@ function init() {
 
   // Linki do Facebooka
   $('#fbBtn').href = FACEBOOK_URL;
-  $('#ctaFacebook').href = FACEBOOK_URL;
+  #ctaFacebook.href = 'tel:+48603138233';
 
   // Dane strukturalne JSON-LD
   try {
