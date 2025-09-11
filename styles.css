@@ -61,6 +61,8 @@ header {
     align-items: center;
     gap: 12px;
     font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
 }
 
 .brand img {
@@ -311,4 +313,8 @@ section {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+/* Ukryj starą kartę "Miasto" (druga w kolejności) */
+.cards .card:nth-child(2) {
+  display: none;
 }
