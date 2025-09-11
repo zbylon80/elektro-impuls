@@ -186,6 +186,15 @@ section {
     color: var(--muted);
 }
 
+/* O nas: ciaśniej między akapitami, większy odstęp pod ostatnim */
+#o-nas .container > p.muted {
+    margin: 0 0 8px;
+}
+
+#o-nas .container > p.muted:last-of-type {
+    margin-bottom: 24px;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
