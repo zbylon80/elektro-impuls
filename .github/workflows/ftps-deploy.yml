@@ -1,0 +1,45 @@
+name: FTPS Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ftps-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Upload via FTPS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Hostinger (FTPS)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }} # np. srvXXXX.main-hosting.eu (bez ftp://)
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: ${{ secrets.FTP_PORT }} # ustaw 21 w sekrecie
+          # Local project directory to upload
+          local-dir: ./
+          # Remote directory on server
+          server-dir: ${{ secrets.FTP_DIR }} # np. /public_html/
+          # Full sync: purge remote dir before upload
+          dangerous-clean-slate: true
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.vscode/**
+            **/*.md
+            **/*.MD
+            **/README*
+            **/.DS_Store
+            **/tmp/**
+          state-name: .ftp-deploy-sync-state.json
