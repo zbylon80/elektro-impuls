@@ -13,7 +13,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elektro - Impuls</title>
   <meta name="description" content="Oficjalna strona firmy Elektro - Impuls - informacje i kontakt." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://elektro-impuls.azurestaticapps.net/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta name="theme-color" content="#0b1220" />
 
   <!-- Open Graph / Social -->
@@ -23,6 +25,29 @@
   <meta property="og:url" content="https://elektro-impuls.azurestaticapps.net/" />
   <meta property="og:image" content="https://elektro-impuls.azurestaticapps.net/assets/logo01.png" />
   <meta property="og:locale" content="pl_PL" />
+
+  <!-- Dane strukturalne JSON-LD (statyczne, dla lepszej indeksacji) -->
+  <script type="application/ld+json" id="schemaStatic">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "Elektro - Impuls",
+    "url": "https://elektro-impuls.azurestaticapps.net/",
+    "image": "https://elektro-impuls.azurestaticapps.net/assets/logo01.png",
+    "logo": "https://elektro-impuls.azurestaticapps.net/assets/logo01.png",
+    "telephone": "+48 603 138 233",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tadeusza Wendy 15A",
+      "postalCode": "80-299",
+      "addressLocality": "Gdańsk",
+      "addressCountry": "PL"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61579354546553"
+    ]
+  }
+  </script>
 
   <!-- Favicon (podmień na finalny plik ikony) -->
   <link rel="icon" href="assets/logo01.png" />

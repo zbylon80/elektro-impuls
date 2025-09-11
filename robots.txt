@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Lokalizacja mapy witryny
+Sitemap: https://elektro-impuls.azurestaticapps.net/sitemap.xml
+
