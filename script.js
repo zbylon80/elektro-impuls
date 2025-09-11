@@ -20,9 +20,11 @@ function init() {
   const heroAvatarEl = $('#heroAvatar');
   if (heroAvatarEl) heroAvatarEl.src = AVATAR_URL;
 
-  // Linki do Facebooka
-  $('#fbBtn').href = FACEBOOK_URL;
-  $('#ctaFacebook').href = 'tel:+48603138233';
+  // Linki do Facebooka i telefonu
+  const fbBtn = $('#fbBtn');
+  if (fbBtn) fbBtn.href = FACEBOOK_URL;
+  const cta = $('#ctaFacebook');
+  if (cta) cta.href = 'tel:+48603138233';
 
   // Dane strukturalne JSON-LD
   try {
