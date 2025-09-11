@@ -3,7 +3,7 @@ const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579354546553';
 const NAZWA = 'Elektro - Impuls';
 const OPIS = 'Tu znajdziesz najnowsze informacje i kontakt do firmy.';
 const AVATAR_URL = 'assets/logo01.png';
-const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Elektro%20-%20Impuls%2C%20Gda%C5%84sk';
+const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=80-299%20Gda%C5%84sk%2C%20Tadeusza%20Wendy%2015A';
 const TELEFON = '+48 603 138 233';
 const MIASTO = 'Gdańsk';
 
@@ -53,14 +53,35 @@ function init() {
     const cards = document.querySelectorAll('.card');
     for (const card of cards) {
       const heading = card.querySelector('strong');
-      if (heading && heading.textContent.trim().toLowerCase().includes('miasto')) {
+      if (!heading) continue;
+      const title = heading.textContent.trim().toLowerCase();
+      if (false && (title.includes('miasto') || title.includes('dane firmy'))) {
+        // Ustaw nagłówek i zawartość karty 'Dane firmy'
+        heading.textContent = 'Dane firmy';
+        // Usuń wszystko po <strong>
+        while (heading.nextSibling) heading.parentNode.removeChild(heading.nextSibling);
+        // Dodaj adres i NIP
+        const addLine = (text) => {
+          const span = document.createElement('span');
+          span.className = 'muted';
+          span.textContent = text;
+          return span;
+        };
+        card.appendChild(document.createElement('br'));
+        card.appendChild(addLine('80-299 Gdańsk'));
+        card.appendChild(document.createElement('br'));
+        card.appendChild(addLine('ul. Tadeusza Wendy 15A'));
+        card.appendChild(document.createElement('br'));
+        card.appendChild(addLine('NIP: 584 192 59 11'));
+
+        // Link do map poniżej adresu i NIP-u
         const linkWrap = document.createElement('span');
         linkWrap.className = 'muted';
         const a = document.createElement('a');
         a.href = MAPS_URL;
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
-        a.setAttribute('aria-label', 'Zobacz lokalizacje w Mapach Google');
+        a.setAttribute('aria-label', 'Zobacz lokalizację w Mapach Google');
         a.textContent = 'Zobacz na mapie';
         a.style.textDecoration = 'underline';
         a.style.display = 'inline-block';
