@@ -3,6 +3,7 @@ const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579354546553';
 const NAZWA = 'Elektro - Impuls';
 const OPIS = 'Tu znajdziesz najnowsze informacje i kontakt do firmy.';
 const AVATAR_URL = 'assets/logo01.png';
+const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Elektro%20-%20Impuls%2C%20Gda%C5%84sk';
 const TELEFON = '+48 603 138 233';
 const MIASTO = 'Gdańsk';
 
@@ -14,8 +15,10 @@ function init() {
   $('#brandName').textContent = NAZWA;
   $('#heroTitle').textContent = NAZWA;
   $('#heroSubtitle').textContent = OPIS;
-  $('#brandAvatar').src = AVATAR_URL;
-  $('#heroAvatar').src = AVATAR_URL;
+  const brandAvatarEl = $('#brandAvatar');
+  if (brandAvatarEl) brandAvatarEl.src = AVATAR_URL;
+  const heroAvatarEl = $('#heroAvatar');
+  if (heroAvatarEl) heroAvatarEl.src = AVATAR_URL;
 
   // Linki do Facebooka
   $('#fbBtn').href = FACEBOOK_URL;
@@ -45,10 +48,38 @@ function init() {
     schemaEl.textContent = JSON.stringify(schema, null, 2);
   } catch (e) { /* noop */ }
 
+  // Dodaj link do Map Google pod kartą "Miasto"
+  try {
+    const cards = document.querySelectorAll('.card');
+    for (const card of cards) {
+      const heading = card.querySelector('strong');
+      if (heading && heading.textContent.trim().toLowerCase().includes('miasto')) {
+        const linkWrap = document.createElement('span');
+        linkWrap.className = 'muted';
+        const a = document.createElement('a');
+        a.href = MAPS_URL;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.setAttribute('aria-label', 'Zobacz lokalizacje w Mapach Google');
+        a.textContent = 'Zobacz na mapie';
+        a.style.textDecoration = 'underline';
+        a.style.display = 'inline-block';
+        a.style.marginTop = '4px';
+        card.appendChild(document.createElement('br'));
+        linkWrap.appendChild(a);
+        card.appendChild(linkWrap);
+        break;
+      }
+    }
+  } catch (_) { /* noop */ }
+
   // (usunięto reveal/IntersectionObserver — brak animacji przewijania)
 }
 
 document.addEventListener('DOMContentLoaded', init);
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+  try { init(); } catch (_) { /* noop */ }
+}
 
 // ====== Gallery Lightbox ======
 function setupGalleryLightbox() {
