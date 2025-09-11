@@ -32,6 +32,10 @@ jobs:
           server-dir: ${{ endsWith(secrets.FTP_DIR, '/') && secrets.FTP_DIR || format('{0}/', secrets.FTP_DIR) }}
           # Full sync: purge remote dir before upload
           dangerous-clean-slate: true
+          # Diagnostics and connection hardening
+          log-level: verbose
+          timeout: 60000
+          security: loose
           exclude: |
             **/.git*
             **/.github/**
