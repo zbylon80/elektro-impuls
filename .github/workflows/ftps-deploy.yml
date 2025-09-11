@@ -28,8 +28,8 @@ jobs:
           port: ${{ secrets.FTP_PORT }} # ustaw 21 w sekrecie
           # Local project directory to upload
           local-dir: ./
-          # Remote directory on server
-          server-dir: ${{ secrets.FTP_DIR }} # np. /public_html/
+          # Remote directory on server (ensure trailing slash)
+          server-dir: ${{ endsWith(secrets.FTP_DIR, '/') && secrets.FTP_DIR || format('{0}/', secrets.FTP_DIR) }}
           # Full sync: purge remote dir before upload
           dangerous-clean-slate: true
           exclude: |
