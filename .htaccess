@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Redirect www to non-www (single hop to HTTPS apex)
+RewriteCond %{HTTP_HOST} ^www\.elektro-impuls\.org$ [NC]
+RewriteRule ^ https://elektro-impuls.org%{REQUEST_URI} [R=301,L]
+
+# Enforce HTTPS on apex
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^elektro-impuls\.org$ [NC]
+RewriteRule ^ https://elektro-impuls.org%{REQUEST_URI} [R=301,L]
+
+DirectoryIndex index.html
