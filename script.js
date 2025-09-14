@@ -1,16 +1,29 @@
 // ====== KONFIGURACJA ======
-const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579354546553';
-const NAZWA = 'Elektro - Impuls';
-const OPIS = 'Tu znajdziesz najnowsze informacje i kontakt do firmy.';
-const AVATAR_URL = 'assets/logo01.png';
-const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=80-299%20Gda%C5%84sk%2C%20Tadeusza%20Wendy%2015A';
-const TELEFON = '+48 603 138 233';
-const MIASTO = 'Gdańsk';
+let CONFIG = {};
+
+function start() {
+  fetch('config.json')
+    .then((res) => res.json())
+    .then((cfg) => {
+      CONFIG = cfg || {};
+      init();
+    })
+    .catch(() => init());
+}
 
 // ====== INICJALIZACJA UI ======
 const $ = (s) => document.querySelector(s);
 
 function init() {
+  const {
+    NAZWA = '',
+    OPIS = '',
+    AVATAR_URL = '',
+    FACEBOOK_URL = '#',
+    TELEFON = '',
+    MIASTO = '',
+  } = CONFIG;
+
   // Podstawowe dane
   $('#brandName').textContent = NAZWA;
   $('#heroTitle').textContent = NAZWA;
@@ -48,13 +61,14 @@ function init() {
     schema.address.addressCountry = 'PL';
     schema.sameAs = [FACEBOOK_URL];
     schemaEl.textContent = JSON.stringify(schema, null, 2);
-  } catch (e) { /* noop */ }
-
+  } catch (e) {
+    /* noop */
   }
+}
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', start);
 if (document.readyState === 'interactive' || document.readyState === 'complete') {
-  try { init(); } catch (_) { /* noop */ }
+  start();
 }
 
 // ====== Gallery Lightbox ======
