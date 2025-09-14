@@ -314,7 +314,3 @@ section {
   justify-content: center;
   cursor: pointer;
 }
-/* Ukryj starą kartę "Miasto" (druga w kolejności) */
-.cards .card:nth-child(2) {
-  display: none;
-}
