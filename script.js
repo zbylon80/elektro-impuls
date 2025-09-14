@@ -50,54 +50,7 @@ function init() {
     schemaEl.textContent = JSON.stringify(schema, null, 2);
   } catch (e) { /* noop */ }
 
-  // Dodaj link do Map Google pod kartą "Miasto"
-  try {
-    const cards = document.querySelectorAll('.card');
-    for (const card of cards) {
-      const heading = card.querySelector('strong');
-      if (!heading) continue;
-      const title = heading.textContent.trim().toLowerCase();
-      if (false && (title.includes('miasto') || title.includes('dane firmy'))) {
-        // Ustaw nagłówek i zawartość karty 'Dane firmy'
-        heading.textContent = 'Dane firmy';
-        // Usuń wszystko po <strong>
-        while (heading.nextSibling) heading.parentNode.removeChild(heading.nextSibling);
-        // Dodaj adres i NIP
-        const addLine = (text) => {
-          const span = document.createElement('span');
-          span.className = 'muted';
-          span.textContent = text;
-          return span;
-        };
-        card.appendChild(document.createElement('br'));
-        card.appendChild(addLine('80-299 Gdańsk'));
-        card.appendChild(document.createElement('br'));
-        card.appendChild(addLine('ul. Tadeusza Wendy 15A'));
-        card.appendChild(document.createElement('br'));
-        card.appendChild(addLine('NIP: 584 192 59 11'));
-
-        // Link do map poniżej adresu i NIP-u
-        const linkWrap = document.createElement('span');
-        linkWrap.className = 'muted';
-        const a = document.createElement('a');
-        a.href = MAPS_URL;
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
-        a.setAttribute('aria-label', 'Zobacz lokalizację w Mapach Google');
-        a.textContent = 'Zobacz na mapie';
-        a.style.textDecoration = 'underline';
-        a.style.display = 'inline-block';
-        a.style.marginTop = '4px';
-        card.appendChild(document.createElement('br'));
-        linkWrap.appendChild(a);
-        card.appendChild(linkWrap);
-        break;
-      }
-    }
-  } catch (_) { /* noop */ }
-
-  // (usunięto reveal/IntersectionObserver — brak animacji przewijania)
-}
+  }
 
 document.addEventListener('DOMContentLoaded', init);
 if (document.readyState === 'interactive' || document.readyState === 'complete') {
