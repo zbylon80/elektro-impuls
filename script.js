@@ -23,8 +23,8 @@ function init() {
   // Linki do Facebooka i telefonu
   const fbBtn = $('#fbBtn');
   if (fbBtn) fbBtn.href = FACEBOOK_URL;
-  const cta = $('#ctaFacebook');
-  if (cta) cta.href = 'tel:+48603138233';
+  const cta = $('#ctaCall');
+  if (cta) cta.href = `tel:${TELEFON.replace(/\s/g, '')}`;
 
   // Dane strukturalne JSON-LD
   try {
