@@ -1,4 +1,4 @@
-* text=auto eol=crlf
+* text=auto eol=lf
 
 # Wymuś UTF-8 dla plików źródłowych
 *.html text working-tree-encoding=UTF-8
